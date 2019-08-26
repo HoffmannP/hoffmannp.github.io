@@ -1,9 +1,25 @@
 @font-face {
   font-family: "Victor Mono";
-  src: url("font/EOT/VictorMono-Medium.eot");
   src:
-  url("font/WOFF/VictorMono-Medium.woff") format("woff"),
-  url("font/OTF/VictorMono-Medium.otf") format("opentype");
+  url("font/WOFF2/VictorMono-Regular.woff2") format("woff2"),
+  url("font/WOFF/VictorMono-Regular.woff") format("woff"),
+  url("font/OTF/VictorMono-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Victor Mono Italic";
+  src:
+  url("font/WOFF2/VictorMono-Italic.woff2") format("woff2"),
+  url("font/WOFF/VictorMono-Italic.woff") format("woff"),
+  url("font/OTF/VictorMono-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Victor Mono Oblique";
+  src:
+  url("font/WOFF2/VictorMono-Oblique.woff2") format("woff2"),
+  url("font/WOFF/VictorMono-Oblique.woff") format("woff"),
+  url("font/OTF/VictorMono-Oblique.otf") format("opentype");
 }
 
 body {
@@ -15,10 +31,6 @@ body {
   padding-right: 3em;
 }
 
-article:last-of-type {
-  height: 150%;
-}
-
 light {
   opacity: 0.5;
 }
@@ -28,6 +40,10 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
+h1, h2 {
+  font-family: 'Victor Mono Italic', 'Times New Roman', Times, serif;
+}
+
 h1 {
   position: fixed;
   margin-top: -3.3em;
@@ -35,6 +51,12 @@ h1 {
   width: 100%;
   padding: 21.44;
   background-color: #1e1e1e;
+}
+
+nav {
+  height: 100%;
+  position: fixed;
+  margin-left: -12em;
 }
 
 article:first-of-type h2 {
@@ -50,8 +72,6 @@ h2 > a {
   top: -4em;
 }
 
-nav {
-  height: 100%;
-  position: fixed;
-  margin-left: -12em;
+article:last-of-type {
+  min-height: calc(100vh - 6.55em);
 }
